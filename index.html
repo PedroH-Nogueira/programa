@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Orçamentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Orçamentos - Jardinagem</h1>
+        <form id="formulario">
+            <input type="text" id="nome" placeholder="Nome do cliente" required>
+            <input type="number" id="area" placeholder="Área do terreno (m²)" required>
+            <select id="servico">
+                <option value="Poda">Poda</option>
+                <option value="Plantio">Plantio</option>
+                <option value="Manutenção Completa">Manutenção Completa</option>
+            </select>
+
+            <div class="radio-group">
+                <label>Deseja manutenção mensal?</label>
+                <input type="radio" name="manutencao" value="Sim" id="manutencaoSim" required>
+                <label for="manutencaoSim">Sim</label>
+                <input type="radio" name="manutencao" value="Não" id="manutencaoNao">
+                <label for="manutencaoNao">Não</label>
+            </div>
+
+            <button type="submit">Salvar Orçamento</button>
+        </form>
+
+        <h2>Orçamentos Cadastrados</h2>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo de Serviço</th>
+                    <th>Área (m²)</th>
+                    <th>Manutenção Mensal</th>
+                    <th>Total Estimado</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
